@@ -9,8 +9,8 @@ app = Flask(__name__)
 # Configurar logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Ruta al archivo de credenciales
-SERVICE_ACCOUNT_FILE = 'credentials.json'
+# Ruta segura al archivo de credenciales en Render
+SERVICE_ACCOUNT_FILE = '/etc/secrets/credentials.json'
 
 # ID de la hoja de cálculo de Google Sheets (extraído de la URL)
 SPREADSHEET_ID = 'TU_ID_DE_HOJA'  # Reemplaza con tu ID real
