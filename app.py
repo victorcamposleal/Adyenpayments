@@ -8,7 +8,7 @@ import logging
 
 app = Flask(__name__)
 excel_file = "adyen_webhooks.xlsx"
-HMAC_KEY = os.getenv("ADYEN_HMAC_KEY")  # Define esta variable en tu entorno
+HMAC_KEY = os.getenv("ADYEN_HMAC_KEY")
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -41,7 +41,6 @@ def is_valid_hmac(notification, hmac_key):
     except Exception as e:
         logging.error(f"Error verificando HMAC: {e}")
         return False
-
 @app.route('/adyen-webhook', methods=['POST'])
 def adyen_webhook():
     try:
