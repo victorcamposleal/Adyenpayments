@@ -13,10 +13,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 SERVICE_ACCOUNT_FILE = '/etc/secrets/credentials.json'
 
 # ID de la hoja de cálculo de Google Sheets (extraído de la URL)
-SPREADSHEET_ID = 'TU_ID_DE_HOJA'  # Reemplaza con tu ID real
+SPREADSHEET_ID = '1A_dE0QWrRPL_zMt6m7W6rIcYY9wI7-ZQxIp2pvAhA2s'  # Reemplaza con tu ID real
 
 # Nombre de la hoja dentro del archivo
-SHEET_NAME = 'Sheet1'
+SHEET_NAME = 'Adyen_Webhooks'
 
 # Función para agregar datos a Google Sheets
 def append_to_google_sheet(values):
